@@ -11,18 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
           toggleButton.textContent = ' Dark Mode';
           icon.classList.remove('fa-moon');
           icon.classList.add('fa-sun');
-          toggleButton.prepend(icon); // Ensure the icon stays in front of the text
+          toggleButton.prepend(icon); 
       } else {
           body.classList.remove('dark-mode');
           body.classList.add('light-mode');
-          toggleButton.textContent = 'Light Mode';
+          toggleButton.textContent = ' Light Mode';
           icon.classList.remove('fa-sun');
           icon.classList.add('fa-moon');
-          toggleButton.prepend(icon); // Ensure the icon stays in front of the text
+          toggleButton.prepend(icon); 
       }
   });
 
-  // Varsayılan olarak gündüz modu
+  
   body.classList.add('light-mode');
 
   // Sol Menü
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.6 // Change this threshold value as needed
+      threshold: 0.6 
   };
 
   const observerCallback = (entries, observer) => {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   sections.forEach(section => observer.observe(section));
 
-  // Mobile Menü
+  // Mobile Menü Toogle Menu
   const aside = document.getElementById('colorlib-aside');
   const toggleButtonMobile = document.getElementById('menu-toggle');
 
